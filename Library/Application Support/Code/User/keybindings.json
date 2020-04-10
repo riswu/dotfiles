@@ -1,0 +1,221 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  {
+    "key": "ctrl+v",
+    "command": "cursorPageDown",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "alt+v",
+    "command": "cursorPageUp",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+v",
+    "command": "cursorPageDownSelect",
+    "when": "editorTextFocus && inStickySelectionMode"
+  },
+  {
+    "key": "alt+v",
+    "command": "cursorPageUpSelect",
+    "when": "editorTextFocus && inStickySelectionMode"
+  },
+  {
+    "key": "shift+alt+.",
+    "command": "cursorBottom",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+alt+,",
+    "command": "cursorTop",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+alt+.",
+    "command": "cursorBottom",
+    "when": "editorTextFocus && inStickySelectionMode"
+  },
+  {
+    "key": "shift+alt+,",
+    "command": "cursorTop",
+    "when": "editorTextFocus && inStickySelectionMode"
+  },
+  {
+    "key": "ctrl+alt+n",
+    "command": "editor.action.marker.nextInFiles",
+    "when": "editorFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+alt+p",
+    "command": "editor.action.marker.prevInFiles",
+    "when": "editorFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "editor.action.clipboardCutAction",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+w",
+    "command": "editor.action.clipboardCopyAction",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+y",
+    "command": "editor.action.clipboardPasteAction",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+x",
+    "command": "sticky-selection.exitStickySelectionMode",
+    "args": {
+      "command": "editor.action.clipboardCutAction",
+      "interval": 100
+    },
+    "when": "editorTextFocus && !editorReadonly && inStickySelectionMode"
+  },
+  {
+    "key": "cmd+c",
+    "command": "sticky-selection.exitStickySelectionMode",
+    "args": {
+      "command": "editor.action.clipboardCopyAction",
+      "interval": 100
+    },
+    "when": "editorTextFocus && inStickySelectionMode"
+  },
+  {
+    "key": "cmd+v",
+    "command": "sticky-selection.exitStickySelectionMode",
+    "args": {
+      "command": "editor.action.clipboardPasteAction",
+      "interval": 100
+    },
+    "when": "editorTextFocus && !editorReadonly && inStickySelectionMode"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "sticky-selection.exitStickySelectionMode",
+    "args": {
+      "command": "editor.action.clipboardCutAction",
+      "interval": 100
+    },
+    "when": "editorTextFocus && !editorReadonly && inStickySelectionMode"
+  },
+  {
+    "key": "alt+w",
+    "command": "sticky-selection.exitStickySelectionMode",
+    "args": {
+      "command": "editor.action.clipboardCopyAction",
+      "interval": 100
+    },
+    "when": "editorTextFocus && inStickySelectionMode"
+  },
+  {
+    "key": "ctrl+y",
+    "command": "sticky-selection.exitStickySelectionMode",
+    "args": {
+      "command": "editor.action.clipboardPasteAction",
+      "interval": 100
+    },
+    "when": "editorTextFocus && !editorReadonly && inStickySelectionMode"
+  },
+  {
+    "key": "backspace",
+    "command": "sticky-selection.exitStickySelectionMode",
+    "args": {
+      "command": "deleteLeft",
+      "interval": 100
+    },
+    "when": "editorTextFocus && inStickySelectionMode"
+  },
+  {
+    "key": "delete",
+    "command": "sticky-selection.exitStickySelectionMode",
+    "args": {
+      "command": "deleteRight",
+      "interval": 100
+    },
+    "when": "editorTextFocus && inStickySelectionMode"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "sticky-selection.exitStickySelectionMode",
+    "args": {
+      "command": "deleteLeft",
+      "interval": 100
+    },
+    "when": "editorTextFocus && inStickySelectionMode"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "sticky-selection.exitStickySelectionMode",
+    "args": {
+      "command": "deleteRight",
+      "interval": 100
+    },
+    "when": "editorTextFocus && !editorReadonly && inStickySelectionMode"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "sticky-selection.exitStickySelectionMode",
+    "args": {
+      "command": "deleteAllRight",
+      "interval": 100
+    },
+    "when": "textInputFocus && !editorReadonly && inStickySelectionMode"
+  },
+  {
+    "key": "ctrl+/",
+    "command": "undo",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+alt+/",
+    "command": "redo",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+[Semicolon]",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+[Semicolon]",
+    "command": "sticky-selection.exitStickySelectionMode",
+    "args": {
+      "command": "editor.action.commentLine",
+      "interval": 100
+    },
+    "when": "editorTextFocus && !editorReadonly && inStickySelectionMode"
+  },
+  {
+    "key": "ctrl+alt+i",
+    "command": "editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+space",
+    "command": "-editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+alt+i",
+    "command": "toggleSuggestionDetails",
+    "when": "suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "ctrl+space",
+    "command": "-toggleSuggestionDetails",
+    "when": "suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "ctrl+space",
+    "command": "editor.action.smartSelect.expand",
+    "when": "editorTextFocus && inStickySelectionMode"
+  },
+  {
+    "key": "ctrl+alt+space",
+    "command": "editor.action.smartSelect.shrink",
+    "when": "editorTextFocus && inStickySelectionMode"
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "title": "Emacs",
+  "rules": [
+    {
+      "description": "Change ctrl+m to return",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "m",
+            "modifiers": { "mandatory": ["control"] }
+          },
+          "to": [{ "key_code": "return_or_enter" }],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": ["^org\\.gnu\\.Emacs"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Change ctrl+i to tab",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "i",
+            "modifiers": { "mandatory": ["control"] }
+          },
+          "to": [{ "key_code": "tab" }],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": ["^org\\.gnu\\.Emacs"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Change ctrl+g to esc",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "g",
+            "modifiers": { "mandatory": ["control"] }
+          },
+          "to": [{ "key_code": "escape" }],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": ["^org\\.gnu\\.Emacs"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
