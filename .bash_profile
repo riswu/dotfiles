@@ -2,6 +2,8 @@ export PATH=/usr/local/sbin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
+export JAVA_HOME=$(/usr/libexec/java_home)
+
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export ANDROID_SDK_ROOT=$ANDROID_HOME
 
