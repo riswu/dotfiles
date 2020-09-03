@@ -32,12 +32,12 @@
   },
   {
     "key": "shift+alt+.",
-    "command": "cursorBottom",
+    "command": "cursorBottomSelect",
     "when": "editorTextFocus && inStickySelectionMode"
   },
   {
     "key": "shift+alt+,",
-    "command": "cursorTop",
+    "command": "cursorTopSelect",
     "when": "editorTextFocus && inStickySelectionMode"
   },
   {
@@ -49,6 +49,26 @@
     "key": "ctrl+alt+p",
     "command": "editor.action.marker.prevInFiles",
     "when": "editorFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+f",
+    "command": "cursorWordEndRight",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "alt+b",
+    "command": "cursorWordStartLeft",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "alt+f",
+    "command": "cursorWordEndRightSelect",
+    "when": "editorTextFocus && inStickySelectionMode"
+  },
+  {
+    "key": "alt+b",
+    "command": "cursorWordStartLeftSelect",
+    "when": "editorTextFocus && inStickySelectionMode"
   },
   {
     "key": "ctrl+w",
@@ -126,7 +146,7 @@
       "command": "deleteLeft",
       "interval": 100
     },
-    "when": "editorTextFocus && inStickySelectionMode"
+    "when": "editorTextFocus && !editorReadonly && inStickySelectionMode"
   },
   {
     "key": "delete",
@@ -135,7 +155,7 @@
       "command": "deleteRight",
       "interval": 100
     },
-    "when": "editorTextFocus && inStickySelectionMode"
+    "when": "editorTextFocus && !editorReadonly && inStickySelectionMode"
   },
   {
     "key": "ctrl+h",
@@ -144,13 +164,41 @@
       "command": "deleteLeft",
       "interval": 100
     },
-    "when": "editorTextFocus && inStickySelectionMode"
+    "when": "editorTextFocus && !editorReadonly && inStickySelectionMode"
   },
   {
     "key": "ctrl+d",
     "command": "sticky-selection.exitStickySelectionMode",
     "args": {
       "command": "deleteRight",
+      "interval": 100
+    },
+    "when": "editorTextFocus && !editorReadonly && inStickySelectionMode"
+  },
+  {
+    "key": "alt+h",
+    "command": "deleteWordLeft",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+d",
+    "command": "deleteWordRight",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+h",
+    "command": "sticky-selection.exitStickySelectionMode",
+    "args": {
+      "command": "deleteWordLeft",
+      "interval": 100
+    },
+    "when": "editorTextFocus && !editorReadonly && inStickySelectionMode"
+  },
+  {
+    "key": "alt+d",
+    "command": "sticky-selection.exitStickySelectionMode",
+    "args": {
+      "command": "deleteWordRight",
       "interval": 100
     },
     "when": "editorTextFocus && !editorReadonly && inStickySelectionMode"
@@ -187,6 +235,15 @@
       "interval": 100
     },
     "when": "editorTextFocus && !editorReadonly && inStickySelectionMode"
+  },
+  {
+    "key": "shift+alt+i",
+    "command": "sticky-selection.exitStickySelectionMode",
+    "args": {
+      "command": "editor.action.insertCursorAtEndOfEachLineSelected",
+      "interval": 100
+    },
+    "when": "editorTextFocus && inStickySelectionMode"
   },
   {
     "key": "ctrl+alt+i",
