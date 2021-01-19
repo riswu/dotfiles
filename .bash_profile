@@ -23,6 +23,16 @@ if type "goenv" > /dev/null 2>&1; then
   eval "$(goenv init -)"
 fi
 
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/keitasugiyama/google-cloud-sdk/path.bash.inc' ]; then
+  . '/Users/keitasugiyama/google-cloud-sdk/path.bash.inc';
+fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/keitasugiyama/google-cloud-sdk/completion.bash.inc' ]; then
+  . '/Users/keitasugiyama/google-cloud-sdk/completion.bash.inc';
+fi
+
 if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
