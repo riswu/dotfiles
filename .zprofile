@@ -24,17 +24,17 @@ if type "goenv" > /dev/null 2>&1; then
 fi
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/keitasugiyama/google-cloud-sdk/path.bash.inc' ]; then
-  . '/Users/keitasugiyama/google-cloud-sdk/path.bash.inc';
+if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then
+  . '~/google-cloud-sdk/path.zsh.inc';
 fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/keitasugiyama/google-cloud-sdk/completion.bash.inc' ]; then
-  . '/Users/keitasugiyama/google-cloud-sdk/completion.bash.inc';
+if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then
+  . '~/google-cloud-sdk/completion.zsh.inc';
 fi
 
-if [ -f ~/.bashrc ]; then
-  . ~/.bashrc
+if [ -f ~/.zshrc ]; then
+  . ~/.zshrc
 fi
 
 if type "fish" > /dev/null 2>&1; then

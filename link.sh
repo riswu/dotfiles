@@ -1,7 +1,7 @@
 #!/bin/sh
 
-ln -snf ~/dotfiles/.bash_profile ~/.bash_profile
-ln -snf ~/dotfiles/.bashrc ~/.bashrc
+ln -snf ~/dotfiles/.zprofile ~/.zprofile
+ln -snf ~/dotfiles/.zshrc ~/.zshrc
 ln -snf ~/dotfiles/.Brewfile ~/.Brewfile
 ln -snf ~/dotfiles/.config/fish ~/.config/fish
 ln -snf ~/dotfiles/.config/karabiner ~/.config/karabiner
